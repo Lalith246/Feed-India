@@ -1,0 +1,384 @@
+:root {
+  --primary-bg: #242526;
+  --secondary-bg: #fff;
+  --primary-text-color: #555;
+  --secondary-text-color: #cecece;
+  --border-radius: 8px;
+  --speed: 500ms;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.loginBox {
+  align-content: center;
+  justify-content: center;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  border: 1px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+}
+
+.registerBox {
+  align-content: center;
+  justify-content: center;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  border: 1px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  margin-top: 7%;
+  margin-bottom: 3%;
+}
+
+.initialPage {
+  align-content: center;
+  justify-content: center;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  border: 1px solid;
+  border-radius: 5%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+}
+
+#logoImg {
+  margin-bottom: 15%;
+}
+
+.uploadBox {
+  display: flex;
+
+  align-content: center;
+  justify-content: center;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  border: 1px solid;
+  width: 600px;
+  margin: auto;
+  margin-top: 7%;
+  margin-bottom: 5%;
+
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.errorMssg {
+  margin-top: 0;
+  color: red;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.btn {
+  background-color: orangered;
+  width: 250px;
+  height: 50px;
+  border-radius: 10%;
+  border: 0;
+  color: white;
+  font-size: large;
+  margin: 5% 5% 5% 0%;
+  padding: 5%;
+}
+
+input {
+  width: 250px;
+  border-radius: 5%;
+  height: 40px;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  background-color: rgba(201, 192, 192, 0.529);
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.item h3 {
+  padding: 0;
+}
+
+.item-quantity {
+  display: flex;
+  justify-content: center;
+}
+
+.item-quantity h2 {
+  margin-left: 70px;
+  margin-bottom: 0px;
+}
+
+.itemInput {
+  width: 120px;
+  height: 30px;
+  background-color: whitesmoke;
+  border-radius: 15%;
+}
+
+.foodItem {
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  border-radius: 5%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  background-color: rgba(201, 192, 192, 0.529);
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  resize: vertical;
+  min-height: 50px;
+}
+
+table,
+td,
+tr,
+th {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+}
+
+tr {
+  background-color: #ffffff;
+}
+
+td {
+  padding: 10px;
+}
+
+input[type='file'] {
+  background-color: white;
+}
+
+select {
+  width: 250px;
+  border-radius: 5%;
+  height: 40px;
+  margin-top: 2%;
+  margin-bottom: 4%;
+  background-color: rgba(201, 192, 192, 0.529);
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: orangered;
+  color: #fff;
+}
+
+.menu-trigger {
+  padding-right: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: orangered;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  width: 220px;
+  border: 1px solid black;
+}
+
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  height: 20px;
+  width: 40px;
+  background: var(--secondary-bg);
+  transform: rotate(45deg);
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+}
+
+.dropdown-menu.inactive {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+  /* color: var(--primary-text-color); */
+  color: black;
+  line-height: 1.2rem;
+}
+
+h3 span {
+  font-size: 14px;
+  /* color: var(--secondary-text-color); */
+  font-weight: 400;
+  color: black;
+}
+
+.dropdown-menu ul li {
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-menu ul li:hover a {
+  color: blue;
+  cursor: pointer;
+}
+
+.dropdown-menu ul li:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.dropdownItem {
+  display: flex;
+  margin: 10px auto;
+}
+
+.dropdownItem img {
+  max-width: 20px;
+  height: 25px;
+  margin-right: 10px;
+  opacity: 0.5;
+  transition: var(--speed);
+}
+
+.dropdownItem a {
+  max-width: 150px;
+  margin-left: 10px;
+  transition: var(--speed);
+}
+
+.heading {
+  margin: auto;
+  font-size: 20px;
+}
+
+.item {
+  background: var(--clr-white);
+  justify-content: space-between;
+  max-width: var(--fixed-width);
+  margin: auto;
+  align-items: center;
+  border-radius: 10%;
+  padding: 1rem 2rem;
+  /* background-color: rgb(210, 199, 199); */
+  background-color: whitesmoke;
+}
+
+.item img {
+  width: 200px;
+  height: 200px;
+}
+
+.item a {
+  padding: 0;
+  margin: 0;
+  color: grey;
+  width: fit-content;
+}
+
+.item a:hover {
+  cursor: pointer;
+  color: orangered;
+}
+
+@media screen and (min-width: 768px) {
+  .hotelList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mymodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+
+.hotelList {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+#imgUpload {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 5%;
+}
+
+.errorMssg {
+  color: red;
+}
